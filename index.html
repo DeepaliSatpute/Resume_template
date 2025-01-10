@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume Builder</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+    <div class="app-container">
+        <div class="controls-panel">
+            <h2 class="section-title">Controls</h2>
+            <button class="btn" id="add-experience">+ Add Experience</button>
+            <button class="btn" id="add-education">+ Add Education</button>
+            <button class="btn" id="add-skill">+ Add Skill</button>
+            <button class="btn" id="download-btn">Download PDF</button>
+        </div>
+
+        <div class="resume-container" id="resume">
+            <div class="resume-header">
+                <div class="header-left">
+                    <h1 contenteditable="true" class="name editable">Your Name</h1>
+                    <h2 contenteditable="true" class="job-title editable">Professional Title</h2>
+                </div>
+                <div class="header-right">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span contenteditable="true" class="editable">email@example.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span contenteditable="true" class="editable">+1 234 567 890</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span contenteditable="true" class="editable">City, Country</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Professional Summary</h3>
+                <div contenteditable="true" class="editable">
+                    A results-driven professional with expertise in... [Your key strengths and career highlights]
+                </div>
+            </div>
+
+            <div class="section" id="experience-section">
+                <h3 class="section-title">Work Experience</h3>
+                <div class="experience-item">
+                    <h4 contenteditable="true" class="editable">Senior Position</h4>
+                    <p class="meta-info" contenteditable="true" class="editable">Company Name | 2020 - Present</p>
+                    <p contenteditable="true" class="editable">• Led cross-functional teams to deliver high-impact projects</p>
+                    <p contenteditable="true" class="editable">• Increased team productivity by 40% through process improvements</p>
+                </div>
+            </div>
+
+            <div class="section" id="education-section">
+                <h3 class="section-title">Education</h3>
+                <div class="education-item">
+                    <h4 contenteditable="true" class="editable">Bachelor of Science in Computer Science</h4>
+                    <p class="meta-info" contenteditable="true" class="editable">University Name | 2016 - 2020</p>
+                    <p contenteditable="true" class="editable">• Graduated with Honors (GPA: 3.8/4.0)</p>
+                    <p contenteditable="true" class="editable">• Relevant Coursework: Data Structures, Algorithms, Software Engineering</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Skills</h3>
+                <div class="skills-container" id="skills-container">
+                    <span class="skill-tag" contenteditable="true">Project Management</span>
+                    <span class="skill-tag" contenteditable="true">Team Leadership</span>
+                    <span class="skill-tag" contenteditable="true">Strategic Planning</span>
+                    <span class="skill-tag" contenteditable="true">Problem Solving</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
